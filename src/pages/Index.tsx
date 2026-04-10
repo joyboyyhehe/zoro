@@ -727,7 +727,8 @@ export default function Index() {
     };
 
     const next = [...messages, userMsg];
-    setMessages(next); setInput(""); setPendingImage(null); setLoading(true);
+    setMessages(next); setInput(""); setLoading(true);
+    setPendingImage(null);
 
     const history = next.slice(-20).map((m) => ({
       role: m.role === "user" ? "user" : "assistant",
